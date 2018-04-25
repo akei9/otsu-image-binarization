@@ -1,0 +1,23 @@
+.root {
+    -fx-background-color: #383838;
+    -fx-font-size: 12px;
+}
+.label {
+    -fx-text-fill: #E0E0E0;
+}
+.button {
+    -fx-background-color: #616161;
+    -fx-text-fill: #E0E0E0;
+    -fx-border-color: #9E9E9E;
+    -fx-border-radius: 4px;
+}
+.text-field {
+    -fx-background-color: #616161;
+    -fx-text-fill: #E0E0E0;
+    -fx-border-color: #9E9E9E;
+    -fx-border-style: dotted;
+    -fx-border-radius: 4px;
+}
+.image-view {
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 5, 0.0 , 0 , 1 );
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kucharczyk.imagebinarization.controllers.MainWindowController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="470.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="55.0" text="File path:">
+               <HBox.margin>
+                  <Insets left="30.0" top="33.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="pathToFileTextField" prefHeight="25.0" prefWidth="260.0">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="loadFileButton" mnemonicParsing="false" onAction="#loadFile" prefHeight="25.0" prefWidth="75.0" text="Load File">
+               <HBox.margin>
+                  <Insets left="20.0" right="30.0" top="30.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="50.0" prefWidth="470.0">
+         <children>
+            <Button fx:id="originalImageButton" mnemonicParsing="false" onAction="#showOriginalImage" prefHeight="25.0" prefWidth="123.0" text="Original Image">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="30.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="grayscaleImageButton" mnemonicParsing="false" onAction="#showGrayscaleImage" prefHeight="25.0" prefWidth="124.0" text="Grayscale Image">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="20.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="binarizedImageButton" mnemonicParsing="false" onAction="#showBinarizedImage" prefHeight="25.0" prefWidth="123.0" text="Binarized Image">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="20.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="280.0" prefWidth="470.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="248.0" fitWidth="379.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

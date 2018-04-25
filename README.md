@@ -1,0 +1,2 @@
+# Image binarization - Otsu algorithm implementation
+Otsu thresholding algorithm implementation created as part of the **Basics of biomterics & telecare** course organized by Bialystok University of Technology (Faculty of Computer Science) and Motorola Solutions Foundation.
