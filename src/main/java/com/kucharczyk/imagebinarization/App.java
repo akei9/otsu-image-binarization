@@ -8,15 +8,12 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class App extends Application {
-    
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
         launch(args);
     }
  
     @Override
     public void start(Stage primaryStage) throws Exception {
-        
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(this.getClass().getResource("/fxml/MainWindow.fxml"));
         
@@ -30,7 +27,5 @@ public class App extends Application {
         primaryStage.getIcons().add(new Image(this.getClass().getResource("/icons/java.png").toString()));
         primaryStage.setScene(scene);
         primaryStage.show();
-        
     }
-    
 }
