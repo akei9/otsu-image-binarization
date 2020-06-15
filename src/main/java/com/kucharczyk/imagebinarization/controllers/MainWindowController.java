@@ -19,7 +19,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.image.ImageView;
 
 public class MainWindowController {
-    
     @FXML
     private TextField pathToFileTextField;
 
@@ -115,5 +114,4 @@ public class MainWindowController {
             showAlertWindow();
         }
     }
- 
 }
