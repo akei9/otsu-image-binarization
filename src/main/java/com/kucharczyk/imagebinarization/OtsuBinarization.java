@@ -7,7 +7,6 @@ import java.io.IOException;
 import javax.imageio.*;
 
 public class OtsuBinarization {
-    
     public static void writeImage(String imageName, BufferedImage img) throws IOException {
         File imgFile = new File(imageName + ".png");
         ImageIO.write(img, "png", imgFile);
@@ -19,8 +18,7 @@ public class OtsuBinarization {
         return img;
     }
 
-    public static void toGrayscale(BufferedImage img) {
-        
+    public static void toGrayscale(BufferedImage img) {    
           for (int x = 0; x < img.getWidth() ; x++) {
             for (int y = 0; y < img.getHeight(); y++) {
 
@@ -38,10 +36,8 @@ public class OtsuBinarization {
         }
     }
   
-    public static int[] createHistogram(BufferedImage img) {
-        
+    public static int[] createHistogram(BufferedImage img) {    
         int[] histogram = new int[256];
-
         for (int i = 0; i < histogram.length; i++) {
             histogram[i] = 0;
         }
@@ -56,12 +52,10 @@ public class OtsuBinarization {
         return histogram;
     }
     
-    public static int getOtsuThreshold(BufferedImage img) {
-        
+    public static int getOtsuThreshold(BufferedImage img) {    
         int[] histogram = createHistogram(img);
         int pixelsNumber = img.getWidth() * img.getHeight();
         float sum = 0;
-        
         for (int i = 0; i < 256; i++) {
             sum += i * histogram[i];
         }
@@ -91,20 +85,15 @@ public class OtsuBinarization {
                 threshold = i;
             }
          }
-        
         return threshold;
     }
     
-    public static void toBinary(BufferedImage img) {
-        
+    public static void toBinary(BufferedImage img) {     
         int threshold = getOtsuThreshold(img);
-
         Color white = new Color(255,255,255);
         Color black = new Color(0,0,0);
-        
         for (int x = 0; x < img.getWidth(); x++) {
-            for (int y = 0; y < img.getHeight(); y++) {
-                
+            for (int y = 0; y < img.getHeight(); y++) {        
                 int rgb = img.getRGB(x,y)&0xff;
                 if (rgb < threshold) {
                     img.setRGB(x, y, black.getRGB());
@@ -114,5 +103,4 @@ public class OtsuBinarization {
             }
         }
     }
-    
 }
